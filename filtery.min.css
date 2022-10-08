@@ -1,0 +1,6 @@
+/* Filtery v1.0.3
+ * Copyright (c) 2022 PhoenixHO
+ * Licensed under: MIT License
+ * REFER TO LICENSE AT: https://github.com/PhoenXHO/filtery/blob/master/LICENSE
+ */
+.hidden-filtery-item {transform: scale3d(0, 0, 0) !important;opacity: 0 !important;top: 0 !important;left: 0 !important;}
