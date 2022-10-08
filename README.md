@@ -38,14 +38,14 @@ In HTML,
 
 ```html
 <ul id="filter">
-	<li data-filter="all"> <a href="#"> <...> </a> <li>
-	<li data-filter="example"> <a href="#"> <...> </a> <li>
-	<...>
+    <li data-filter="all"> <a href="#"> <...> </a> <li>
+    <li data-filter="example"> <a href="#"> <...> </a> <li>
+    <...>
 </ul>
 
 <div id=selector>
-	<div data-category="example" class="item"> <...> </div>
-	<...>
+    <div data-category="example" class="item"> <...> </div>
+    <...>
 </div>
 ```
 
@@ -57,21 +57,21 @@ With jQuery,
 
 ```javascript
 $("#filtery").filtery({
-	itemSelector: '.item',
-	columns: 3,
-	gap: 10,
-	animationDuration: 400,
-	responsive: {
-		1280: {
-			columns: 3
-		},
-		991: {
-			columns: 2
-		},
-		0: {
-			columns: 1
-		}
-	}
+    itemSelector: '.item',
+    columns: 3,
+    gap: 10,
+    animationDuration: 400,
+    responsive: {
+        1280: {
+            columns: 3
+        },
+        991: {
+            columns: 2
+        },
+        0: {
+            columns: 1
+        }
+    }
 });
 ```
 
@@ -79,21 +79,21 @@ With Vanilla JavaScript,
 
 ```javascript
 var filtery = new Filtery(document.querySelector("#filtery"), {
-	itemSelector: '.item',
-	columns: 3,
-	gap: 10,
-	animationDuration: 400,
-	responsive: {
-		1280: {
-			columns: 3
-		},
-		991: {
-			columns: 2
-		},
-		0: {
-			columns: 1
-		}
-	}
+    itemSelector: '.item',
+    columns: 3,
+    gap: 10,
+    animationDuration: 400,
+    responsive: {
+        1280: {
+            columns: 3
+        },
+        991: {
+            columns: 2
+        },
+        0: {
+            columns: 1
+        }
+    }
 });
 ```
 
