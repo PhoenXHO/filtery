@@ -25,12 +25,20 @@
 
 		this.defaults = {
 			itemSelector: ".item",
-			dataFilter: "filter",
-			dataCategory: "category",
 			columns: 3,
 			gap: 10,
 			animationDuration: 400,
-			responsive: {}
+			responsive: {
+				1280: {
+					columns: 3
+				},
+				991: {
+					columns: 2
+				},
+				0: {
+					columns: 1
+				}
+			}
 		};
 
 		this.$filterButtons = document.querySelectorAll("#filter a");
@@ -107,7 +115,7 @@
 
 		initFilters: function () {
 			if (this.$currentFilter) {
-				this.filter = this.$currentFilter.dataset[this.defaults.dataFilter];
+				this.filter = this.$currentFilter.dataset["filter"];
 			} else {
 				this.$currentFilter = this.$filterButtons[0].classList.add("current");
 				this.initFilters();
@@ -123,7 +131,7 @@
 		},
 
 		handleFilter: function ($filter) {
-			let category = $filter.dataset[this.defaults.dataFilter];
+			let category = $filter.dataset["filter"];
 			
 			if (category === this.filter) return;
 
@@ -136,8 +144,8 @@
 				this.$activeItems = this.$items;
 				this.$hiddenItems = null;
 			} else {
-				this.$activeItems = this.$items.filter("[data-" + this.defaults.dataCategory +"=\"" + category + "\"]");
-				this.$hiddenItems = this.$items.filter(":not([data-" + this.defaults.dataCategory +"=\"" + category + "\"])");
+				this.$activeItems = this.$items.filter("[data-category=\"" + category + "\"]");
+				this.$hiddenItems = this.$items.filter(":not([data-category=\"" + category + "\"])");
 			}
 
 			this.orderItems();

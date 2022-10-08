@@ -12,15 +12,18 @@
   },
   "keywords": [
     "filtery",
-	"filter",
-	"grid",
-	"masonry",
-	"layout"
+    "filter",
+    "grid",
+    "masonry",
+    "layout"
   ],
   "author": "PhoenXHO (PhoenixHO)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PhoenXHO/filtery/issues"
   },
-  "homepage": "https://github.com/PhoenXHO/filtery#readme"
+  "homepage": "https://github.com/PhoenXHO/filtery#readme",
+  "directories": {
+    "test": "test"
+  }
 }
