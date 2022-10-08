@@ -1,3 +1,9 @@
+/*! Filtery v1.0.3
+* Copyright (c) 2022 PhoenixHO
+* Licensed under: MIT License
+* REFER TO LICENSE AT: https://github.com/PhoenXHO/filtery/blob/master/LICENSE
+*/
+
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		module.exports = factory(root);
