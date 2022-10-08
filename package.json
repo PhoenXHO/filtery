@@ -1,6 +1,6 @@
 {
   "name": "filtery",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Simple JavaScript plugin for easy filterable masonry grid",
   "main": "filtery.js",
   "scripts": {
