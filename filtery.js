@@ -34,17 +34,7 @@
 			columns: 3,
 			gap: 10,
 			animationDuration: 400,
-			responsive: {
-				1280: {
-					columns: 3
-				},
-				991: {
-					columns: 2
-				},
-				0: {
-					columns: 1
-				}
-			}
+			responsive: {}
 		};
 
 		this.$filterButtons = document.querySelectorAll("#filter a");

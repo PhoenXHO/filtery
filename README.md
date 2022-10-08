@@ -61,17 +61,7 @@ $("#filtery").filtery({
     columns: 3,
     gap: 10,
     animationDuration: 400,
-    responsive: {
-        1280: {
-            columns: 3
-        },
-        991: {
-            columns: 2
-        },
-        0: {
-            columns: 1
-        }
-    }
+    responsive: {}
 });
 ```
 
@@ -83,6 +73,17 @@ var filtery = new Filtery(document.querySelector("#filtery"), {
     columns: 3,
     gap: 10,
     animationDuration: 400,
+    responsive: {}
+});
+```
+
++ `itemSelector`: the selector expression for the elements of the grid.
++ `columns`: the number of columns in the grid.
++ `gap`: the gap between each item in the grid (in `px`), basically the margin.
++ `animationDuration`: the duration of the animation of the items in the grid.
++ `responsive`: contains the media queries for a responsive grid. It can contain all of the above options.
+  + Example:
+    ```javascript
     responsive: {
         1280: {
             columns: 3
@@ -94,11 +95,4 @@ var filtery = new Filtery(document.querySelector("#filtery"), {
             columns: 1
         }
     }
-});
-```
-
-+ `itemSelector`: the selector expression for the elements of the grid.
-+ `columns`: the number of columns in the grid.
-+ `gap`: the gap between each item in the grid (in `px`), basically the margin.
-+ `animationDuration`: the duration of the animation of the items in the grid.
-+ `responsive`: contains the media queries for a responsive grid. It can contain all of the above options.
+    ```
