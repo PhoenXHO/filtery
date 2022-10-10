@@ -16,7 +16,7 @@ You can install this `filtery.js` using NPM, with the following command,
 $ npm install filtery
 ```
 
-Refer to the [releases page](https://github.com/PhoenXHO/filtery/releases) to download a specific it manually.
+Refer to the [releases page](https://github.com/PhoenXHO/filtery/releases) to download it manually.
 
 ## Basic Usage
 
@@ -109,10 +109,10 @@ Example:
 
 ```javascript
 $("#filtery").on('filtery:load', function () {
-	console.log("Filtery grid has loaded");
+    console.log("Filtery grid has loaded");
 });
 
 $("#filtery").on('filtery:resize', function () {
-	console.log("Filtery grid has been resized");
+    console.log("Filtery grid has been resized");
 });
 ```

@@ -1,4 +1,4 @@
-/* Filtery v1.1.2
+/* Filtery v1.2.0
  * Copyright (c) 2022 PhoenixHO
  * Licensed under: MIT License
  * REFER TO LICENSE AT: https://github.com/PhoenXHO/filtery/blob/master/LICENSE
