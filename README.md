@@ -109,10 +109,10 @@ Example:
 
 ```javascript
 $("#filtery").on('filtery:load', function () {
-	console.log("Filtery grid has loaded");
+    console.log("Filtery grid has loaded");
 });
 
 $("#filtery").on('filtery:resize', function () {
-	console.log("Filtery grid has been resized");
+    console.log("Filtery grid has been resized");
 });
 ```
