@@ -1,4 +1,4 @@
-/* Filtery v1.0.3
+/* Filtery v1.1.2
  * Copyright (c) 2022 PhoenixHO
  * Licensed under: MIT License
  * REFER TO LICENSE AT: https://github.com/PhoenXHO/filtery/blob/master/LICENSE
@@ -54,12 +54,17 @@
 
 	Filtery.prototype = {
 		init: function () {
+			const loadEvent = new Event("filtery:load");
+			const resizeEvent = new Event("filtery:resize");
+
 			window.addEventListener("load", function () {
 				self.overrideSettings();
 				self.getColumnWidth();
 				self.initCSS();
 				self.initFilters();
 				self.orderItems();
+
+				self.$parent.dispatchEvent(loadEvent);
 			});
 
 			let resizeTimer;
@@ -70,6 +75,9 @@
 					self.getColumnWidth();
 					self.orderItems();
 				}, 100);
+				setTimeout(function () {
+					self.$parent.dispatchEvent(resizeEvent);
+				}, 700);
 			});
 		},
 

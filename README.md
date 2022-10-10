@@ -6,6 +6,7 @@ A simple JavaScript to make filterable masonry layouts
 1. [Installation](#installation)
 2. [Basic Usage](#basic-usage)
 3. [Options](#options)
+4. [JavaScript Events](#javascript-events)
 
 ## Installation
 
@@ -96,3 +97,22 @@ var filtery = new Filtery(document.querySelector("#filtery"), {
         }
     }
     ```
+
+## JavaScript Events
+
+To fix some issues with other plugins that register the offsets of elements below a grid before the items are ordered 
+(like Waypoints or AOS), two events were added that get dispatched on Filtery elements: `filtery:load`, that triggers 
+when the grid is loaded and the items are ordered, and `filtery:resize`, that triggers when the grid is refreshed after 
+resizing the window.
+
+Example:
+
+```javascript
+$("#filtery").on('filtery:load', function () {
+	console.log("Filtery grid has loaded");
+});
+
+$("#filtery").on('filtery:resize', function () {
+	console.log("Filtery grid has been resized");
+});
+```
